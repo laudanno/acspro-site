@@ -1,1 +1,289 @@
-<h1>Teste do ACSpro Site</h1>
+html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACSpro - Gestão da Atenção Básica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1b669f;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header img {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: -20px auto 40px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+
+        .section-text {
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+            text-align: justify;
+            color: #444;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 200px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-download {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        .btn-download:hover {
+            background-color: #219653;
+            transform: translateY(-2px);
+        }
+
+        .btn-manual {
+            background-color: #1f6aa5;
+            color: white;
+        }
+
+        .btn-manual:hover {
+            background-color: #144870;
+            transform: translateY(-2px);
+        }
+
+        .donation-area {
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .donation-area h3 {
+            color: #1b669f;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .donation-area p {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 20px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: justify;
+        }
+
+        .pix-box {
+            display: inline-block;
+            background: #f9f9f9;
+            border: 2px dashed #d1d1d1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+
+        .pix-box img {
+            width: 160px;
+            height: 160px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .pix-key {
+            font-size: 0.95rem;
+            color: #333;
+            font-weight: bold;
+            background: #e0e0e0;
+            padding: 8px 12px;
+            border-radius: 5px;
+            display: inline-block;
+            user-select: all;
+            margin-top: 5px;
+        }
+
+        .sugestao {
+            font-size: 0.85rem;
+            color: #27ae60;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .btn-copiar {
+            background-color: #1b669f;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-copiar:hover {
+            background-color: #144870;
+        }
+
+        .btn-copiar.copiado {
+            background-color: #27ae60;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        @media (max-width: 600px) {
+            .card { padding: 25px; }
+            header img { max-width: 250px; }
+            header p { font-size: 1rem; padding: 0 10px; }
+            .btn { width: 100%; }
+            .section-text { text-align: left; }
+            .donation-area p { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="assets/logo.png" alt="Logo ACSpro">
+        <p>Sistema de Gestão da Atenção Básica para o Agente Comunitário de Saúde</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <p class="section-text">
+                O <strong>ACSpro</strong> nasceu de uma necessidade real. Acompanhando de perto a rotina e a dificuldade de organização da minha esposa, que atua como Agente Comunitária de Saúde, percebi o quanto o dia a dia era sobrecarregado por planilhas e processos manuais.
+            </p>
+            <p class="section-text">
+                A primeira solução foi uma ferramenta em Excel. No entanto, com o tempo, ela se mostrou frágil e difícil de manter. Foi então que decidi dedicar dias de planejamento e desenvolvimento para criar algo muito mais sólido, rápido e à prova de falhas.
+            </p>
+            <p class="section-text">
+                O resultado é o ACSpro: um sistema que substitui as planilhas por uma interface simples e focada na realidade da atenção básica. Ele permite realizar cadastros completos, organizar famílias por microárea e gerar relatórios em poucos cliques.
+            </p>
+            <p class="section-text">
+                A ferramenta é <strong>totalmente gratuita</strong> e está em constante evolução. Baixe agora e tenha mais tempo para o que realmente importa: o cuidado com as pessoas.
+            </p>
+
+            <div class="action-buttons">
+                <a href="#" class="btn btn-download">
+                    📥 Baixar o ACSpro (Instalador)
+                </a>
+                
+                <a href="#" class="btn btn-manual">
+                    📖 Ler o Manual de Uso
+                </a>
+            </div>
+
+            <div class="donation-area">
+                <h3>Apoie este Projeto</h3>
+                <p>O ACSpro é um projeto independente, sem vínculos com empresas ou órgãos públicos, e continuará sendo sempre gratuito para os agentes. Se esta ferramenta tem facilitado o seu trabalho e você deseja contribuir para que o desenvolvedor continue mantendo o sistema atualizado e criando novas melhorias, você pode fazer uma doação.</p>
+                
+                <div class="pix-box">
+                    <span class="sugestao">Sugerimos doações a partir de R$ 10,00</span>
+                    
+                    <img src="assets/qrcode.png" alt="QR Code para Doação via PIX">
+                    
+                    <br>
+                    <span style="font-size: 0.9rem; color: #666; font-weight: bold;">Chave PIX (E-mail):</span><br>
+                    <span class="pix-key" id="chave-pix">waldenorjr.1123@gmail.com</span>
+                    
+                    <br><br>
+                    
+                    <button class="btn-copiar" onclick="copiarPix()" id="btn-copiar">
+                        📋 Copiar Chave PIX
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Desenvolvido por José Waldenor Júnior.<br>
+        ACSpro &copy; 2024 - Ferramenta de apoio à Atenção Básica.
+    </footer>
+
+    <script>
+        function copiarPix() {
+            const chave = document.getElementById("chave-pix").innerText;
+            
+            navigator.clipboard.writeText(chave).then(() => {
+                const btn = document.getElementById("btn-copiar");
+                
+                btn.innerText = "✅ Copiado!";
+                btn.classList.add("copiado");
+                
+                setTimeout(() => {
+                    btn.innerText = "📋 Copiar Chave PIX";
+                    btn.classList.remove("copiado");
+                }, 2000);
+            }).catch(err => {
+                alert("Erro ao copiar. Por favor, copie manualmente.");
+            });
+        }
+    </script>
+</body>
+</html>
